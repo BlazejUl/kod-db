@@ -2,6 +2,7 @@ import sqlite3
 import json
 
 def backup():
+    """Zapisuje stan bazy danych do nowej bazy danych."""
     conn1 = sqlite3.connect('sqlite/litedata.db')
     backcon = sqlite3.connect('sqlite/backup_litedata.db')
     conn1.backup(backcon)
